@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Lauriane Pereira</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boneco Dançando</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #333;
+    }
+    .boneco {
+      position: relative;
+      width: 50px;
+      height: 100px;
+      background: #f1c40f;
+    }
+    .cabeca, .corpo, .braco, .perna {
+      position: absolute;
+      background: #f1c40f;
+    }
+    .cabeca {
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+    .corpo {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 50px;
+    }
+    .braco {
+      width: 10px;
+      height: 40px;
+    }
+    .braco.esquerdo {
+      top: 5px;
+      left: -15px;
+      transform-origin: top right;
+      animation: bracoEsquerdo 1s infinite;
+    }
+    .braco.direito {
+      top: 5px;
+      right: -15px;
+      transform-origin: top left;
+      animation: bracoDireito 1s infinite;
+    }
+    .perna {
+      width: 10px;
+      height: 50px;
+      top: 50px;
+    }
+    .perna.esquerda {
+      left: 0;
+      transform-origin: top left;
+      animation: pernaEsquerda 1s infinite;
+    }
+    .perna.direita {
+      right: 0;
+      transform-origin: top right;
+      animation: pernaDireita 1s infinite;
+    }
+
+    @keyframes bracoEsquerdo {
+      0%, 100% { transform: rotate(45deg); }
+      50% { transform: rotate(-45deg); }
+    }
+
+    @keyframes bracoDireito {
+      0%, 100% { transform: rotate(-45deg); }
+      50% { transform: rotate(45deg); }
+    }
+
+    @keyframes pernaEsquerda {
+      0%, 100% { transform: rotate(45deg); }
+      50% { transform: rotate(-45deg); }
+    }
+
+    @keyframes pernaDireita {
+      0%, 100% { transform: rotate(-45deg); }
+      50% { transform: rotate(45deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="boneco">
+    <div class="cabeca"></div>
+    <div class="corpo"></div>
+    <div class="braco esquerdo"></div>
+    <div class="braco direito"></div>
+    <div class="perna esquerda"></div>
+    <div class="perna direita"></div>
+  </div>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
